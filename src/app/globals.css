@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  /* Sets the perspective for 3D transformations */
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+
+  /* Enables 3D space for transformed children */
+  .transform-style-3d {
+    transform-style: preserve-3d;
+  }
+
+  /* Hides the back face of the element when it's rotated */
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+
+  /* Rotates the element 180 degrees around the Y-axis */
+  .rotate-y-180 {
+    transform: rotateY(180deg);
+  }
+}
