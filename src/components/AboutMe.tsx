@@ -32,9 +32,9 @@ const AboutMe: React.FC = () => {
           onMouseLeave={() => setHoveredItem(null)}
         >
           <CapitolItem
-            firm="Freelance"
+            firm={t("freelance")}
             title={t("titleFE")}
-            year="2024 - Present"
+            year="2024"
             bulletPoints={[t("descFE")]}
           />
         </div>

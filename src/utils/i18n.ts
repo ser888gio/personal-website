@@ -25,6 +25,8 @@ const resources = {
       yourEmail: "Your Email",
       subject: "Subject",
       message: "Message",
+      present: "Present",
+      freelance: "Freelance",
       bulletPoint1Education:
         "Proficient in C# programming, with experience in projects such as a Student Management System and a Gym Management System.",
       bulletPoint2Education:
@@ -76,6 +78,8 @@ const resources = {
       yourEmail: "Vaše emailová adresa",
       subject: "Předmět",
       message: "Zpráva",
+      freelance: "Na volné noze",
+      present: "Současnost",
       bulletPoint1Education:
         "Programovaní v C# – projekty: Student Management System, Gym Management System",
       bulletPoint2Education:
