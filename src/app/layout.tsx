@@ -1,23 +1,20 @@
 "use client";
 
 import "./globals.css";
-import BusinessCard from "./components/BusinessCard";
-import TechStack from "./components/TechStack";
-import Navbar from "./components/Navbar";
-import AboutMe from "./components/AboutMe";
-import ContactMe from "./components/ContactMe";
-import Footer from "./components/Footer";
+import BusinessCard from "../components/BusinessCard";
+import TechStack from "../components/TechStack";
+import Navbar from "../components/Navbar";
+import AboutMe from "../components/AboutMe";
+import ContactMe from "../components/ContactMe";
+import Footer from "../components/Footer";
 import "@/utils/i18n";
-import LanguageButton from "./components/LanguageButton";
-import { Inter } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
+import LanguageButton from "../components/LanguageButton";
 
 export default function RootLayout({}: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={inter.className}>
+    <html lang="en">
       <body className={`antialiased min-h-screen bg-[#0F172A] relative mt-10`}>
         <div className="absolute top-4 right-4 z-10">
           <LanguageButton />
