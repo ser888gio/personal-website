@@ -15,7 +15,7 @@ export default function RootLayout({}: Readonly<{
 }>) {
   return (
     <html lang="en">
-      <body className={`antialiased min-h-screen bg-[#0F172A] relative mt-10`}>
+      <body className={`antialiased min-h-screen bg-[#0F172A] relative mt-10 text-white`}>
         <div className="absolute top-4 right-4 z-10">
           <LanguageButton />
         </div>
