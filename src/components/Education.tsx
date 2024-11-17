@@ -7,17 +7,17 @@ interface EducationItemProps {
   bulletPoints: string[];
 }
 
-const EducationItem: React.FC<EducationItemProps> = ({
+function EducationItem({
   schoolName,
   degree,
   year,
   bulletPoints,
-}) => {
+}: EducationItemProps) {
   return (
     <section className="flex mb-6">
       {/* Left column: Timeline */}
       <div className="w-1/4 pr-4 text-right">
-        <p className="text-sm text-gray-600">{year}</p>
+        <p className="text-sm text-[#999999]">{year}</p>
       </div>
 
       {/* Right column: Education details */}
@@ -34,6 +34,6 @@ const EducationItem: React.FC<EducationItemProps> = ({
       </div>
     </section>
   );
-};
+}
 
 export default EducationItem;

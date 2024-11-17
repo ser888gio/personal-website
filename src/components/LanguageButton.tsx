@@ -13,7 +13,7 @@ const LanguageButton: React.FC = () => {
     <button
       onClick={() => changeLanguage(i18n.language === "en" ? "cz" : "en")}
     >
-      {i18n.language === "en" ? "CZ" : "EN"}
+      {i18n.language === "cz" ? "EN" : "CZ"}
     </button>
   );
 };

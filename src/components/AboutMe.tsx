@@ -1,12 +1,11 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import CapitolItem from "./Capitol";
 import EducationItem from "./Education";
 import { useTranslation } from "react-i18next";
 
-const AboutMe: React.FC = () => {
-  const [hoveredItem, setHoveredItem] = useState<string | null>(null);
+function AboutMe() {
   const { t } = useTranslation();
 
   return (
@@ -15,7 +14,7 @@ const AboutMe: React.FC = () => {
       className="mb-5 scroll-mt-16 md:mb-10 lg:mb-10 lg:scroll-mt-24"
       aria-label="About me"
     >
-      <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-900/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
+      <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
         <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only">
           {t("about")}
         </h2>
@@ -24,13 +23,7 @@ const AboutMe: React.FC = () => {
         <h3 className="text-xl font-semibold text-slate-200 mb-4">
           {t("workExperience")}
         </h3>
-        <div
-          className={`transition-all duration-300 ${
-            hoveredItem === "frontend" ? "scale-105 bg-slate-800" : ""
-          }`}
-          onMouseEnter={() => setHoveredItem("frontend")}
-          onMouseLeave={() => setHoveredItem(null)}
-        >
+        <div>
           <CapitolItem
             firm={t("freelance")}
             title={t("titleFE")}
@@ -38,13 +31,7 @@ const AboutMe: React.FC = () => {
             bulletPoints={[t("descFE")]}
           />
         </div>
-        <div
-          className={`transition-all duration-300 ${
-            hoveredItem === "itAnalyst" ? "scale-105 bg-slate-800" : ""
-          }`}
-          onMouseEnter={() => setHoveredItem("itAnalyst")}
-          onMouseLeave={() => setHoveredItem(null)}
-        >
+        <div>
           <CapitolItem
             firm={t("firmGenerali")}
             title={t("titleGenerali")}
@@ -52,13 +39,7 @@ const AboutMe: React.FC = () => {
             bulletPoints={[t("descGenerali")]}
           />
         </div>
-        <div
-          className={`transition-all duration-300 ${
-            hoveredItem === "dataAnalyst" ? "scale-105 bg-slate-800" : ""
-          }`}
-          onMouseEnter={() => setHoveredItem("dataAnalyst")}
-          onMouseLeave={() => setHoveredItem(null)}
-        >
+        <div>
           <CapitolItem
             firm="Global Payments"
             title={t("titleGP")}
@@ -69,13 +50,7 @@ const AboutMe: React.FC = () => {
         <h3 className="text-xl font-semibold text-slate-200 mt-8 mb-4">
           {t("education")}
         </h3>
-        <div
-          className={`transition-all duration-300 ${
-            hoveredItem === "education" ? "scale-105 bg-slate-800" : ""
-          }`}
-          onMouseEnter={() => setHoveredItem("education")}
-          onMouseLeave={() => setHoveredItem(null)}
-        >
+        <div>
           <EducationItem
             schoolName={t("schoolName")}
             degree={t("schoolTitle")}
@@ -93,6 +68,6 @@ const AboutMe: React.FC = () => {
       </div>
     </section>
   );
-};
+}
 
 export default AboutMe;

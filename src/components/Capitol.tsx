@@ -7,16 +7,11 @@ interface CapitolItemProps {
   bulletPoints: string[];
 }
 
-const CapitolItem: React.FC<CapitolItemProps> = ({
-  firm,
-  title,
-  year,
-  bulletPoints,
-}) => {
+function CapitolItem({ firm, title, year, bulletPoints }: CapitolItemProps) {
   return (
     <section className="flex mb-6">
       <div className="w-1/4 pr-4 text-right">
-        <p className="text-sm text-gray-600">{year}</p>
+        <p className="text-sm text-[#999999]">{year}</p>
       </div>
       <div className="w-3/4">
         <h3 className="text-lg font-semibold">{title}</h3>
@@ -31,6 +26,6 @@ const CapitolItem: React.FC<CapitolItemProps> = ({
       </div>
     </section>
   );
-};
+}
 
 export default CapitolItem;

@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 
-const ContactMe: React.FC = () => {
+function ContactMe() {
   const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: "",
@@ -22,9 +22,9 @@ const ContactMe: React.FC = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const { email, subject, message } = formData;
-    const mailtoLink = `mailto:novotnyjan40@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
-      `Email: ${email}\n\n${message}`
-    )}`;
+    const mailtoLink = `mailto:novotnyjan40@gmail.com?subject=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(`Email: ${email}\n\n${message}`)}`;
     window.location.href = mailtoLink;
   };
 
@@ -67,13 +67,13 @@ const ContactMe: React.FC = () => {
         </div>
         <button
           type="submit"
-          className="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600"
+          className="w-full bg-[#0C3095] text-white py-2 px-4 rounded-md"
         >
           {t("contact")}
         </button>
       </form>
     </div>
   );
-};
+}
 
 export default ContactMe;
